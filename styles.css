@@ -28,12 +28,15 @@ main{
 
 .main-container{
   display: none;
-  margin-top: 50px;
   width: max-content;
   font-size: 2rem;
   color: rgb(51, 81, 48);
   background-color:rgb(212, 199, 199, 0.75);
   border: none;
+}
+
+#icon{
+  display: none;
 }
 
 footer{

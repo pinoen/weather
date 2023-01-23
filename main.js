@@ -7,12 +7,15 @@ const temperature = document.querySelector('#temperature');
 const humidity = document.querySelector('#humidity');
 const wind = document.querySelector('#wind');
 const container = document.querySelector('.main-container')
+const icon = document.querySelector('#icon')
 
 
 forecast.addEventListener('click', () => {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${place.value}&units=metric&APPID=fb361e569aa1d25671a8e46453459568`)
     .then(res => res.json())
     .then(data => {
+      icon.style.display = 'block'
+      icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       container.style.display = 'block'
       city.textContent = 'City: ' + data.name;
       country.textContent = 'Country: ' + data.sys.country;
