@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+  background-image: url(./img/nature.jpg);
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+button{
+  cursor: pointer;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+.main-container{
+  display: none;
+  margin-top: 50px;
+  width: max-content;
+  font-size: 2rem;
+  color: rgb(51, 81, 48);
+  background-color:rgb(212, 199, 199, 0.75);
+  border: none;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  color: aliceblue;
+  text-align: right;
+  width: 100%;
+}
