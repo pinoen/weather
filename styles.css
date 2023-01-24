@@ -35,10 +35,6 @@ main{
   border: none;
 }
 
-#icon{
-  display: none;
-}
-
 footer{
   position: fixed;
   bottom: 0;
