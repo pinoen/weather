@@ -8,6 +8,12 @@ const humidity = document.querySelector('#humidity');
 const wind = document.querySelector('#wind');
 const container = document.querySelector('.main-container')
 const icon = document.querySelector('#icon')
+const time = document.querySelector('#time')
+
+function localTime(unixTime) {
+  const currentTime = new Date(unixTime * 1000);
+  return currentTime.toLocaleString('en-GB')
+}
 
 
 forecast.addEventListener('click', () => {
@@ -15,7 +21,8 @@ forecast.addEventListener('click', () => {
     .then(res => res.json())
     .then(data => {
       icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
-      container.style.display = 'block'
+      container.style.display = 'block';
+      time.textContent = localTime(data.dt);
       city.textContent = 'City: ' + data.name;
       country.textContent = 'Country: ' + data.sys.country;
       description.textContent = 'Description: ' + data.weather[0].description;
